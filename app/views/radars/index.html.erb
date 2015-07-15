@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Radars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @radars.each do |radar| %>
+      <tr>
+        <td><%= radar.latitude %></td>
+        <td><%= radar.longitude %></td>
+        <td><%= radar.description %></td>
+        <td><%= link_to 'Show', radar %></td>
+        <td><%= link_to 'Edit', edit_radar_path(radar) %></td>
+        <td><%= link_to 'Destroy', radar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Radar', new_radar_path %>

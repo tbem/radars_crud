@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @radar.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @radar.longitude %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @radar.description %>
+</p>
+
+<%= link_to 'Edit', edit_radar_path(@radar) %> |
+<%= link_to 'Back', radars_path %>
